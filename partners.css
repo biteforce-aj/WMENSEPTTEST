@@ -1,0 +1,151 @@
+/* Partners List */
+.partners-section {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 2.2rem;
+  color: #013a33;
+  margin-bottom: 15px;
+}
+
+.partners-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: 25px;
+  background-color: #f3eddf;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.partner-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.partner-info h3 {
+  color: #105a30;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.partner-info p {
+  flex: 1;
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.partner-link {
+  align-self: flex-start;
+  color: #d23672;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.partner-link:hover {
+  color: #ae2b5e;
+  text-decoration: underline;
+}
+
+.partner-link i {
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+/* Become a Partner */
+.partner-cta {
+  background: linear-gradient(40deg, #075e54 0%, #39a195 47%, #013a33 100%);
+  padding: 80px 30px;
+  text-align: center;
+  color: white;
+}
+
+.partner-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.partner-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.partner-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.partner-cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: #d23672;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.partner-cta-btn:hover {
+  background: #ae2b5e;
+}
+
+@media (max-width: 768px) {
+  .partners-section,
+  .partner-cta {
+    padding: 60px 16px;
+  }
+
+  .partners-section h2,
+  .partner-cta h2 {
+    font-size: 1.7rem;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}

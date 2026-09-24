@@ -6,7 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
-    <link rel="stylesheet" href="story.css" />
+    <link rel="stylesheet" href="team.css" />
+    <link rel="stylesheet" href="partners.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +18,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>W+Men</title>
+    <title>W+Men | Our Partners</title>
   </head>
   <body>
     <section class="header">
       <nav>
         <a href="index.html"><img class="logo" src="img/WMLC-06-07-copy.png" /></a>
         <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
           <ul>
             <li><a href="index.html">HOME</a></li>
             <li class="dropdown">
@@ -36,17 +37,22 @@
               </div>
             </li>
             <li><a href="services.html">SERVICES</a></li>
+            <!-- <li><a href="">JOIN NOW</a></li> -->
           </ul>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open menu"></i>
       </nav>
-        <!-- Mission Section -->
-    <section class="mission-container">
-      <div class="mission-label">OUR MISSION</div>
-      <div class="mission-statement">
-          Empowering inclusive leadership that drives sustainable change and creates meaningful impact worldwide.
-      </div>
-  </section>
+      <!-- Partners Hero -->
+      <section class="team-container">
+        <div class="team-label">OUR PARTNERS</div>
+        <div class="team-statement">
+          Stronger Together,<br> Leading Change Side by Side.
+        </div>
+        <div class="team-subheading">
+          We work alongside organizations who share our commitment to inclusive
+          leadership, stronger health systems, and lasting change.
+        </div>
+      </section>
 
         <!-- <a href="" class="hero-btn">Join Our Mailing List</a> -->
       </div>
@@ -128,53 +134,103 @@
       </div>
     </section>
     
-    <!-- Vision Section -->
-    <section class="vision-section">
-      <div class="container">
-          <h2 class="vision-header">Our Vision</h2>
-          <p class="vision-tagline">"Empowering leaders to drive meaningful change."</p>
-          <p class="vision-description">
-              We envision a world where diverse, equitable and empowered leadership thrives across all industries. W+Men Leading Change aspires to be a global leader in advancing leadership excellence, organizational transformation and impactful program implementation, ensuring sustainable and effective solutions for all clients.
-          </p>
-      </div>
-  </section>
 
-  <!-- Principles Section -->
-  <section class="principles-section">
-      <div class="container">
-          <h2 class="principles-header">Our Guiding Principles</h2>
-          <div class="principles-grid">
-              <div class="principle-card">
-                  <img class="principle-icon1" src="img/Group 10.svg" alt="Collaboration Icon">
-                  <h3 class="principle-title">Collaboration and Partnership</h3>
-                  <p class="principle-description">
-                      We unite diverse minds to create powerful solutions through genuine partnerships built on mutual respect and shared goals.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon2" src="img/Group 11.svg" alt="Equity Icon">
-                  <h3 class="principle-title">Equity and Access</h3>
-                  <p class="principle-description">
-                      We remove barriers to ensure leadership development is accessible to all, regardless of background or identity.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon3" src="img/Group 12.svg" alt="Integrity Icon">
-                  <h3 class="principle-title">Integrity and Accountability</h3>
-                  <p class="principle-description">
-                      We uphold transparency and ethical standards while taking responsibility for our actions and measuring our impact.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon4" src="img/Group 13.svg" alt="Innovation Icon">
-                  <h3 class="principle-title">Innovation with Purpose</h3>
-                  <p class="principle-description">
-                      We drive intentional creativity focused on practical solutions that create meaningful, sustainable change.
-                  </p>
-              </div>
-          </div>
+    <!-- Partners List -->
+    <section class="partners-section">
+      <h2>Organizations We Work With</h2>
+      <p class="partners-intro">
+        Our partners bring expertise, reach, and shared purpose. Together, we're
+        building programs that create real, measurable impact.
+      </p>
+
+      <div class="partners-grid">
+      <!-- TODO: confirm description and website link -->
+      <article class="partner-card">
+        <div class="partner-logo">
+          <img src="img/partners/aghes.jpg" alt="Adaptive Global Health Solutions logo" />
+        </div>
+        <div class="partner-info">
+          <h3>Adaptive Global Health Solutions</h3>
+          <p>Adaptive Global Health Solutions works to strengthen health systems and improve health outcomes. Together, we design and deliver leadership programs for health professionals, including SoarHer 2026.</p>
+          <a href="#" class="partner-link" target="_blank" rel="noopener">
+            Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TODO: confirm description and website link -->
+      <article class="partner-card">
+        <div class="partner-logo">
+          <img src="img/partners/asido.jpg" alt="Asido Foundation logo" />
+        </div>
+        <div class="partner-info">
+          <h3>Asido Foundation</h3>
+          <p>The Asido Foundation is a non-profit organization committed to community wellbeing. Our partnership supports programs that equip leaders to drive meaningful change in their communities.</p>
+          <a href="#" class="partner-link" target="_blank" rel="noopener">
+            Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TODO: confirm description and website link -->
+      <article class="partner-card">
+        <div class="partner-logo">
+          <img src="img/partners/byc.jpg" alt="BYC logo" />
+        </div>
+        <div class="partner-info">
+          <h3>BYC</h3>
+          <p>BYC partners with us to create opportunities for emerging leaders, helping young people build the skills and confidence to lead.</p>
+          <a href="#" class="partner-link" target="_blank" rel="noopener">
+            Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TODO: confirm description and website link -->
+      <article class="partner-card">
+        <div class="partner-logo">
+          <img src="img/partners/macforte.jpg" alt="Marcforté logo" />
+        </div>
+        <div class="partner-info">
+          <h3>Marcforté</h3>
+          <p>Marcforté collaborates with us on strategic initiatives that help organizations grow, adapt, and build high-performing teams.</p>
+          <a href="#" class="partner-link" target="_blank" rel="noopener">
+            Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TODO: confirm description and website link -->
+      <article class="partner-card">
+        <div class="partner-logo">
+          <img src="img/partners/wlg.jpg" alt="Women in Leadership &amp; Governance logo" />
+        </div>
+        <div class="partner-info">
+          <h3>Women in Leadership &amp; Governance</h3>
+          <p>Women in Leadership & Governance champions women's representation in decision-making. Together, we advance gender-inclusive leadership across sectors.</p>
+          <a href="#" class="partner-link" target="_blank" rel="noopener">
+            Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </article>
       </div>
-  </section>
+    </section>
+
+    <!-- Become a Partner -->
+    <section class="partner-cta">
+      <div class="partner-cta-inner">
+        <div class="team-label">PARTNER WITH US</div>
+        <h2>Let's Lead Change Together</h2>
+        <p>
+          Are you an organization committed to inclusive leadership, stronger
+          health systems, or workforce development? We'd love to explore how we
+          can work together.
+        </p>
+        <a href="mailto:contact@wmenleadingchange.com?subject=Partnership%20Enquiry" class="partner-cta-btn">
+          Become a Partner
+        </a>
+      </div>
+    </section>
 
   <div class="mailing">
     <a href="" class="hero-btn">Join Our Mailing List</a>
@@ -235,6 +291,6 @@
       </div>
     </footer>
 
-    <script src="story.js"></script>
+    <script src="team.js"></script>
   </body>
 </html>
