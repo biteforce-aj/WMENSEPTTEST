@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="team.css" />
+    <link rel="stylesheet" href="partners-3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>W+Men | Our Partners</title>
+  </head>
+  <body>
+    <section class="header p3-header">
+      <nav>
+        <a href="index.html"><img class="logo" src="img/WMLC-06-07-copy.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+              <a href="index.html#about" class="dropbtn">ABOUT</a>
+              <div class="dropdown-content">
+                <a href="story.html">OUR STORY</a>
+                <a href="team.html">OUR TEAM</a>
+                <a href="partners.html">OUR PARTNERS</a>
+                <a href="partners-2.html">OUR PARTNERS (V2)</a>
+                <a href="partners-3.html">OUR PARTNERS (V3)</a>
+              </div>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+            <!-- <li><a href="">JOIN NOW</a></li> -->
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open menu"></i>
+      </nav>
+      <!-- Hero -->
+      <div class="p3-hero">
+        <div class="p3-hero-text">
+          <div class="p3-eyebrow">OUR PARTNERS</div>
+          <h1>Change is never a <span>solo effort.</span></h1>
+          <p>
+            Behind every leader we train and every program we deliver is a
+            network of organizations who believe, as we do, that inclusive
+            leadership transforms institutions and communities.
+          </p>
+          <div class="p3-hero-actions">
+            <a href="#p3-stories" class="p3-btn p3-btn-pink">See our work together</a>
+            <a href="#p3-join" class="p3-btn p3-btn-outline">Become a partner</a>
+          </div>
+        </div>
+        <div class="p3-hero-collage" aria-hidden="true">
+          <img class="p3-collage-main" src="img/group-afro-americans-working-together.jpg" alt="" />
+          <img class="p3-collage-small" src="img/services2.webp" alt="" />
+          <div class="p3-collage-badge">
+            <i class="fa-solid fa-handshake"></i>
+            <span>Stronger<br />together</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup Overlay -->
+      <div class="popup-overlay" id="newsletter-popup">
+        <div class="popup-container">
+          <!-- Close button inside the container -->
+          <button class="close-btn" id="close-popup-btn">&times;</button>
+
+          <!-- Left: Image Section -->
+          <div class="popup-image">
+            <img
+              src="img/popup image.webp"
+              alt="People collaborating around a laptop"
+            />
+          </div>
+
+          <!-- Right: Form Section -->
+          <div class="popup-form">
+            <!-- Logo -->
+            <div class="popup-logo">
+              <img src="img/WMLC-06-07.png" alt="Women Leading Change" />
+            </div>
+
+            <!-- Heading -->
+            <h2 class="popup-heading">Stay Informed. Lead the Change.</h2>
+
+            <!-- Subheading -->
+            <p class="popup-subheading">
+              Get leadership insights, expert tips, and exclusive updates
+              straight to your inbox.
+            </p>
+
+            <!-- Form -->
+            <form id="newsletter-form">
+              <!-- Name Fields -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first-name"
+                    placeholder="John"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last-name"
+                    placeholder="Andrews"
+                  />
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email Address"
+                />
+              </div>
+
+              <!-- Privacy Note -->
+              <p class="privacy-note">
+                "We respect your privacy. No spam, just valuable insights."
+              </p>
+
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Join now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Partner With -->
+    <section class="p3-sectors">
+      <div class="p3-section-head">
+        <div class="p3-eyebrow p3-eyebrow-dark">WHO WE WORK WITH</div>
+        <h2>Partnerships across every sector</h2>
+      </div>
+      <div class="p3-sector-grid">
+        <div class="p3-sector">
+          <div class="p3-sector-icon"><i class="fa-solid fa-building"></i></div>
+          <h3>Corporations &amp; SMEs</h3>
+          <p>Building leadership pipelines and inclusive workplace cultures.</p>
+        </div>
+        <div class="p3-sector">
+          <div class="p3-sector-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Government &amp; Public Institutions</h3>
+          <p>Strengthening public systems and the people who run them.</p>
+        </div>
+        <div class="p3-sector">
+          <div class="p3-sector-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>NGOs &amp; Development Partners</h3>
+          <p>Co-delivering programs that reach communities where it matters.</p>
+        </div>
+        <div class="p3-sector">
+          <div class="p3-sector-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Academic &amp; Professional Bodies</h3>
+          <p>Advancing research, learning and professional standards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Band -->
+    <section class="p3-logos">
+      <h2>In good company</h2>
+      <p>Organizations who share our vision and help carry it further.</p>
+      <!-- Placeholder: replace each <span>Partner Logo</span> with <img src="img/partners/..." alt="Partner name" />.
+           Keep both lists identical so the scrolling loop is seamless. -->
+      <div class="p3-marquee">
+        <ul class="p3-marquee-track">
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+        </ul>
+        <ul class="p3-marquee-track" aria-hidden="true">
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+          <li class="p3-logo"><span>Partner Logo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Partnership Stories -->
+    <section class="p3-stories" id="p3-stories">
+      <div class="p3-section-head">
+        <div class="p3-eyebrow p3-eyebrow-dark">PARTNERSHIP STORIES</div>
+        <h2>What we've built together</h2>
+      </div>
+      <div class="p3-stories-layout">
+        <div class="p3-tabs" role="tablist" aria-label="Partner stories">
+          <button class="p3-tab" role="tab" id="p3-tab-1" aria-controls="p3-panel-1" aria-selected="true">
+            <span class="p3-tab-num">01</span>
+            <span class="p3-tab-name">Partner Name 1</span>
+          </button>
+          <button class="p3-tab" role="tab" id="p3-tab-2" aria-controls="p3-panel-2" aria-selected="false" tabindex="-1">
+            <span class="p3-tab-num">02</span>
+            <span class="p3-tab-name">Partner Name 2</span>
+          </button>
+          <button class="p3-tab" role="tab" id="p3-tab-3" aria-controls="p3-panel-3" aria-selected="false" tabindex="-1">
+            <span class="p3-tab-num">03</span>
+            <span class="p3-tab-name">Partner Name 3</span>
+          </button>
+        </div>
+        <!-- Placeholder: replace image, logo, text, outcomes and link -->
+        <div class="p3-panel" role="tabpanel" id="p3-panel-1" aria-labelledby="p3-tab-1">
+          <div class="p3-panel-image">
+            <img src="img/services1 (1).webp" alt="" />
+            <span class="p3-panel-tag">Leadership program</span>
+          </div>
+          <div class="p3-panel-body">
+            <div class="p3-panel-logo"><span>Partner Logo</span></div>
+            <h3>Partnership title goes here</h3>
+            <p>
+              A short story about what we set out to do together with this
+              partner, who it reached, and why it mattered.
+            </p>
+            <ul class="p3-outcomes">
+              <li><strong>00+</strong><span>Leaders trained</span></li>
+              <li><strong>00</strong><span>Institutions reached</span></li>
+              <li><strong>0000</strong><span>Year started</span></li>
+            </ul>
+            <a href="#" class="p3-text-link">Read the full story <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Placeholder: replace image, logo, text, outcomes and link -->
+        <div class="p3-panel" role="tabpanel" id="p3-panel-2" aria-labelledby="p3-tab-2" hidden>
+          <div class="p3-panel-image">
+            <img src="img/services3.webp" alt="" />
+            <span class="p3-panel-tag">Health systems</span>
+          </div>
+          <div class="p3-panel-body">
+            <div class="p3-panel-logo"><span>Partner Logo</span></div>
+            <h3>Partnership title goes here</h3>
+            <p>
+              A short story about what we set out to do together with this
+              partner, who it reached, and why it mattered.
+            </p>
+            <ul class="p3-outcomes">
+              <li><strong>00+</strong><span>Leaders trained</span></li>
+              <li><strong>00</strong><span>Institutions reached</span></li>
+              <li><strong>0000</strong><span>Year started</span></li>
+            </ul>
+            <a href="#" class="p3-text-link">Read the full story <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Placeholder: replace image, logo, text, outcomes and link -->
+        <div class="p3-panel" role="tabpanel" id="p3-panel-3" aria-labelledby="p3-tab-3" hidden>
+          <div class="p3-panel-image">
+            <img src="img/group-afro-americans-working-together.jpg" alt="" />
+            <span class="p3-panel-tag">Workforce development</span>
+          </div>
+          <div class="p3-panel-body">
+            <div class="p3-panel-logo"><span>Partner Logo</span></div>
+            <h3>Partnership title goes here</h3>
+            <p>
+              A short story about what we set out to do together with this
+              partner, who it reached, and why it mattered.
+            </p>
+            <ul class="p3-outcomes">
+              <li><strong>00+</strong><span>Leaders trained</span></li>
+              <li><strong>00</strong><span>Institutions reached</span></li>
+              <li><strong>0000</strong><span>Year started</span></li>
+            </ul>
+            <a href="#" class="p3-text-link">Read the full story <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Become a Partner -->
+    <section class="p3-join" id="p3-join">
+      <div class="p3-join-inner">
+        <div class="p3-join-text">
+          <div class="p3-eyebrow">PARTNER WITH US</div>
+          <h2>Let's lead change together.</h2>
+          <p>
+            Whether you want to co-deliver a program, sponsor a cohort, or
+            share expertise, there is a place for you in our network.
+          </p>
+          <a href="mailto:contact@wmenleadingchange.com?subject=Partnership%20Enquiry" class="p3-btn p3-btn-pink">
+            Start a conversation
+          </a>
+        </div>
+        <ol class="p3-steps">
+          <li>
+            <span class="p3-step-num">1</span>
+            <div>
+              <h3>Reach out</h3>
+              <p>Tell us about your organization and what you'd like to achieve.</p>
+            </div>
+          </li>
+          <li>
+            <span class="p3-step-num">2</span>
+            <div>
+              <h3>Discovery call</h3>
+              <p>We explore shared goals and where our strengths fit together.</p>
+            </div>
+          </li>
+          <li>
+            <span class="p3-step-num">3</span>
+            <div>
+              <h3>Co-design</h3>
+              <p>We shape a partnership built around measurable, lasting impact.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  <div class="mailing">
+    <a href="" class="hero-btn">Join Our Mailing List</a>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-section footer-brand">
+          <div class="footer-logo"><img src="img/WMLC-06-07.png" alt="" /></div>
+          <div class="footer-description">
+            Empowering leaders and organizations through sustainable leadership
+            development, strategic consulting, and impactful programs.
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Quick links</div>
+          <div class="footer-links">
+            <a href="index.html#about">About us</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#testimonials">Testimonials</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Opening hours</div>
+          <div class="footer-hours">
+            <p>Monday - Friday</p>
+            <p>09:00AM - 05:00PM</p>
+            <p>Saturday</p>
+            <p>10:00AM - 02:00PM</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-info">
+            <p>Phone No:</p>
+            <p>+2349042494900</p>
+            <p>Email:</p>
+            <p>wmenleadingchange@gmail.com</p>
+            <p>contact@wmenleadingchange.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">TWITTER</a>
+          <a href="#">LINKEDIN</a>
+        </div>
+        <div class="copyright">© Copyright WMEN 2026 - All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <script src="team.js"></script>
+    <script src="partners-3.js"></script>
+  </body>
+</html>
