@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoarHer 2026 — Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="soarher-hero.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400&family=Syne:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/WMLC-06-07-copy.png" sizes="32x32" />
+    <link rel="icon" href="img/WMLC-06-07-copy.png" sizes="16x16" />
+  </head>
+  <body>
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-glow-main"></div>
+      <div class="hero-glow-secondary"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-ring-2"></div>
+      <canvas id="particles"></canvas>
+
+      <!-- Nav -->
+      <nav>
+        <a href="index.html">
+          <img src="img/WMLC-06-07-copy.png" alt="Women Leading Change" />
+        </a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times lg:hidden" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li class="dropdown">
+              <a href="index.html#about" class="dropbtn">ABOUT</a>
+              <div class="dropdown-content">
+                <a href="story.html">OUR STORY</a>
+                <a href="team.html">OUR TEAM</a>
+              </div>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+          </ul>
+        </div>
+        <div class="hl hidden lg:flex"></div>
+        <i class="fa fa-bars lg:hidden" id="hamburger" onclick="showMenu()"></i>
+      </nav>
+
+      <!-- Side editorial label -->
+      <div class="side-label">
+        IWD 2026 &nbsp;·&nbsp; Women Leading Change &nbsp;·&nbsp; Lagos, Nigeria
+      </div>
+
+      <!-- Main content -->
+      <div class="hero-content">
+        <!-- Live badge -->
+        <div class="iwd-badge">
+          <span class="iwd-dot"></span>
+          Applications Open · International Women's Day 2026
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-headline" id="css-reflect">SOARHER 2026</h1>
+
+        <!-- Tagline -->
+        <p class="hero-tagline">
+          Equipping Young Women to Rise — From Campus to Corporate
+        </p>
+
+        <!-- Body -->
+        <p class="hero-body">
+          A transformational 3-month online leadership experience designed for
+          young Nigerian women ready to step boldly into the corporate world.
+        </p>
+
+        <!-- Badges -->
+        <div class="badges">
+          <span class="badge">100% Online</span>
+          <span class="badge">Limited to 26 Participants</span>
+          <span class="badge">Completely Free</span>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-strip">
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-days">18</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-mins">00</span>
+            <span class="countdown-label">Mins</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-secs">00</span>
+            <span class="countdown-label">Secs</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-wrap">
+          <a
+            href="https://forms.gle/KMe5RjZeB8TXAhBX8"
+            class="cta-btn"
+            target="_blank"
+          >
+            <span>Apply Now — Closes 22nd March</span>
+            <span class="cta-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-cue">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══ TRANSITION ═══ -->
+    <div class="bridge-transition">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff" />
+      </svg>
+    </div>
+
+    <!-- ═══ SECTION 1 — THE GAP ═══ -->
+    <section class="section-gap" id="why">
+      <div class="section-inner">
+        <div class="gap-eyebrow reveal-child">THE PROBLEM</div>
+        <div class="gap-layout">
+          <div class="gap-left reveal-child">
+            <h2 class="section-headline dark">
+              The Transition<br /><em>No One Prepares<br />You For.</em>
+            </h2>
+          </div>
+          <div class="gap-right">
+            <p class="gap-body reveal-child">
+              University prepares you for exams. The corporate world demands
+              clarity, confidence, emotional intelligence, and strategy. The gap
+              between both can feel overwhelming — and most women cross it
+              alone.
+            </p>
+            <div class="gap-bridge-line reveal-child">
+              <div class="bridge-dot"></div>
+              <span>SoarHer 2026 is your bridge.</span>
+            </div>
+            <div class="gap-stats reveal-child">
+              <div class="stat-item">
+                <span class="stat-num" data-target="26">0</span>
+                <span class="stat-unit">women</span>
+                <span class="stat-desc">selected per cohort</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="3">0</span>
+                <span class="stat-unit">months</span>
+                <span class="stat-desc">of transformation</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num" data-target="100">0</span>
+                <span class="stat-unit">%</span>
+                <span class="stat-desc">completely free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 2 — WHAT YOU'LL GAIN ═══ -->
+    <section class="section-gain" id="gain">
+      <div class="gain-bg-text" aria-hidden="true">RISE</div>
+      <div class="section-inner">
+        <div class="gain-header">
+          <div
+            class="gap-eyebrow reveal-child"
+            style="color: var(--green-accent)"
+          >
+            WHAT YOU'LL GAIN
+          </div>
+          <h2 class="section-headline dark reveal-child">
+            Five Pillars of<br /><em>Transformation.</em>
+          </h2>
+        </div>
+        <div class="gain-grid">
+          <div class="gain-card reveal-child" style="--delay: 0s">
+            <div class="gain-card-number">01</div>
+            <div class="gain-card-icon">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <h3 class="gain-card-title">Career Clarity</h3>
+            <p class="gain-card-body">
+              Define your direction with intention. Know where you're going and
+              why — before you take the first step.
+            </p>
+            <div class="gain-card-line"></div>
+          </div>
+
+          <div class="gain-card reveal-child" style="--delay: 0.1s">
+            <div class="gain-card-number">02</div>
+            <div class="gain-card-icon">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <h3 class="gain-card-title">Employability Skills</h3>
+            <p class="gain-card-body">
+              Build workplace-ready competence — from CVs and interviews to
+              communication that commands respect.
+            </p>
+            <div class="gain-card-line"></div>
+          </div>
+
+          <div class="gain-card reveal-child" style="--delay: 0.2s">
+            <div class="gain-card-number">03</div>
+            <div class="gain-card-icon">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="gain-card-title">Mentorship Access</h3>
+            <p class="gain-card-body">
+              Learn from women who've walked the path. Real conversations, real
+              insight, zero sugarcoating.
+            </p>
+            <div class="gain-card-line"></div>
+          </div>
+
+          <div class="gain-card reveal-child" style="--delay: 0.3s">
+            <div class="gain-card-number">04</div>
+            <div class="gain-card-icon">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <h3 class="gain-card-title">Professional Network</h3>
+            <p class="gain-card-body">
+              Connect with 25 other ambitious women. Your next collaborator,
+              cheerleader, or referral is in this cohort.
+            </p>
+            <div class="gain-card-line"></div>
+          </div>
+
+          <div
+            class="gain-card gain-card--wide reveal-child"
+            style="--delay: 0.4s"
+          >
+            <div class="gain-card-number">05</div>
+            <div class="gain-card-icon">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+            </div>
+            <h3 class="gain-card-title">Certificate of Completion</h3>
+            <p class="gain-card-body">
+              A credential that marks the beginning of a new chapter — proof of
+              your commitment, growth, and readiness to lead in today's
+              corporate world.
+            </p>
+            <div class="gain-card-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 3 — WHAT WE'LL COVER ═══ -->
+    <section class="section-modules" id="modules">
+      <div class="section-inner">
+        <div class="modules-layout">
+          <div class="modules-left">
+            <div class="gap-eyebrow reveal-child">PROGRAM MODULES</div>
+            <h2 class="section-headline dark reveal-child">
+              What We'll<br /><em>Cover.</em>
+            </h2>
+            <p class="modules-subtext reveal-child">
+              Every module addresses the real gaps between university life and
+              corporate excellence — grounded in lived experience, delivered
+              live.
+            </p>
+            <div class="modules-meta reveal-child">
+              <div class="meta-item">
+                <span class="meta-icon">◷</span>
+                <div class="meta-text">
+                  <strong>3 Months</strong>
+                  <span>Duration</span>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">◈</span>
+                <div class="meta-text">
+                  <strong>6 Live Sessions</strong>
+                  <span>Interactive Workshops</span>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">◉</span>
+                <div class="meta-text">
+                  <strong>100% Online</strong>
+                  <span>Join from anywhere</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modules-right">
+            <div class="module-item reveal-child" style="--delay: 0s">
+              <div class="module-num">01</div>
+              <div class="module-content">
+                <h4>Leadership & Personal Branding</h4>
+                <p>
+                  Own your narrative. Build a presence that opens doors before
+                  you enter the room.
+                </p>
+              </div>
+              <span class="module-arrow">→</span>
+            </div>
+            <div class="module-item reveal-child" style="--delay: 0.08s">
+              <div class="module-num">02</div>
+              <div class="module-content">
+                <h4>Emotional Intelligence & Confidence</h4>
+                <p>
+                  Navigate workplace dynamics with grace, boundaries, and
+                  unshakeable self-awareness.
+                </p>
+              </div>
+              <span class="module-arrow">→</span>
+            </div>
+            <div class="module-item reveal-child" style="--delay: 0.16s">
+              <div class="module-num">03</div>
+              <div class="module-content">
+                <h4>Career Strategy & Workplace Readiness</h4>
+                <p>
+                  From job search to day one — tactics, mindset, and the
+                  unwritten rules of the office.
+                </p>
+              </div>
+              <span class="module-arrow">→</span>
+            </div>
+            <div class="module-item reveal-child" style="--delay: 0.24s">
+              <div class="module-num">04</div>
+              <div class="module-content">
+                <h4>Mental Health & Resilience</h4>
+                <p>
+                  Sustainable ambition. Perform at your peak without burning out
+                  before you begin.
+                </p>
+              </div>
+              <span class="module-arrow">→</span>
+            </div>
+            <div class="module-item reveal-child" style="--delay: 0.32s">
+              <div class="module-num">05</div>
+              <div class="module-content">
+                <h4>Networking & Community Building</h4>
+                <p>
+                  Relationships are currency. Build and leverage a network that
+                  lasts beyond the programme.
+                </p>
+              </div>
+              <span class="module-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ SECTION 4 — WHO CAN APPLY ════ -->
+    <section class="section-who" id="apply-who">
+      <div class="section-inner">
+        <div class="who-layout">
+          <div class="who-left">
+            <div class="gap-eyebrow">WHO CAN APPLY</div>
+            <h2 class="section-headline dark reveal-always">
+              Is This<br /><em>For You?</em>
+            </h2>
+            <ul class="who-list">
+              <li class="who-list-item reveal-always" style="--delay: 0.05s">
+                <div class="who-check">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="who-item-text"
+                  >Final-year undergraduates in Nigeria</span
+                >
+              </li>
+              <li class="who-list-item reveal-always" style="--delay: 0.1s">
+                <div class="who-check">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="who-item-text"
+                  >Recent graduates within the last 2 years</span
+                >
+              </li>
+              <li class="who-list-item reveal-always" style="--delay: 0.15s">
+                <div class="who-check">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="who-item-text"
+                  >Young women ready to grow personally and professionally</span
+                >
+              </li>
+              <li class="who-list-item reveal-always" style="--delay: 0.2s">
+                <div class="who-check">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="who-item-text"
+                  >Aspiring leaders who want to build strong foundations
+                  early</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="who-right reveal-always" style="--delay: 0.15s">
+            <div class="who-card">
+              <div class="who-card-eyebrow">The Right Fit</div>
+              <p class="who-card-quote">
+                If this sounds like you,<br /><em>you belong here.</em>
+              </p>
+              <a href="https://forms.gle/KMe5RjZeB8TXAhBX8" class="who-card-cta"
+                ><span>Apply for SoarHer 2026</span
+                ><span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ SECTION 5 — PROGRAM STRUCTURE ════ -->
+    <section class="section-structure" id="structure">
+      <div class="section-inner">
+        <div class="structure-header">
+          <div
+            class="gap-eyebrow"
+            style="color: var(--green-accent); text-align: center"
+          >
+            PROGRAM STRUCTURE
+          </div>
+          <h2
+            class="section-headline dark reveal-always"
+            style="text-align: center"
+          >
+            Built for<br /><em>Real Life.</em>
+          </h2>
+        </div>
+        <div class="structure-grid">
+          <div class="structure-card reveal-always" style="--delay: 0s">
+            <div class="structure-icon-wrap">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div class="structure-card-label">Duration</div>
+            <div class="structure-card-value">3 Months</div>
+            <div class="structure-card-sub">April — June 2026</div>
+          </div>
+          <div class="structure-card reveal-always" style="--delay: 0.1s">
+            <div class="structure-icon-wrap">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <div class="structure-card-label">Mode</div>
+            <div class="structure-card-value">100% Online</div>
+            <div class="structure-card-sub">Join from anywhere in Nigeria</div>
+          </div>
+          <div class="structure-card reveal-always" style="--delay: 0.2s">
+            <div class="structure-icon-wrap">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="23 7 16 12 23 17 23 7" />
+                <rect x="1" y="5" width="15" height="14" rx="2" />
+              </svg>
+            </div>
+            <div class="structure-card-label">Format</div>
+            <div class="structure-card-value">6 bi-weekly Live Sessions</div>
+            <div class="structure-card-sub">Workshops + Mentorship</div>
+          </div>
+          <div class="structure-card reveal-always" style="--delay: 0.3s">
+            <div class="structure-icon-wrap">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="structure-card-label">Cohort Size</div>
+            <div class="structure-card-value">26 Women</div>
+            <div class="structure-card-sub">Strictly limited for depth</div>
+          </div>
+        </div>
+        <p class="structure-tagline reveal-always" style="--delay: 0.4s">
+          — Intentionally small cohort for deeper transformation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════ TRANSITION: CREAM → DARK ════ -->
+    <div class="cream-to-dark"></div>
+
+    <!-- ════ SECTION 6 — APPLY CTA ════ -->
+    <section class="section-apply" id="apply">
+      <div class="apply-glow-1"></div>
+      <div class="apply-glow-2"></div>
+      <div class="apply-glow-3"></div>
+      <div class="apply-ring"></div>
+      <div class="apply-ring-2"></div>
+      <div class="apply-inner">
+        <div class="apply-eyebrow reveal-always">
+          <span class="apply-eyebrow-dot"></span>Applications Close 22nd March
+          2026
+        </div>
+        <h2 class="apply-headline reveal-always">
+          Your Leadership<br />Journey <em>Starts</em><br />Now.
+        </h2>
+        <p class="apply-sub reveal-always">
+          26 spots. Zero cost. One transformational cohort.<br />Selected
+          candidates will be contacted via email.
+        </p>
+        <div class="apply-spots reveal-always">
+          <span class="spots-dot"></span>Only 26 Spots Available
+        </div>
+        <div class="cta-wrap reveal-always" style="--delay: 0.1s">
+          <a href="https://forms.gle/KMe5RjZeB8TXAhBX8" class="apply-btn"
+            ><span>Apply for SoarHer 2026</span
+            ><span class="apply-btn-arrow">→</span></a
+          >
+        </div>
+        <p class="apply-note reveal-always" style="--delay: 0.15s">
+          Selected candidates will be contacted via email &nbsp;·&nbsp; In
+          partnership with AGHS
+        </p>
+      </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-bottom">
+          <p class="footer-copy md:text-xl">
+            © 2026 Women Leading Change. All rights reserved.
+          </p>
+          <p class="footer-partner">
+            In partnership with
+            <span>Adaptive Global Health Solutions (AGHS)</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="soarher-hero.js"></script>
+  </body>
+</html>

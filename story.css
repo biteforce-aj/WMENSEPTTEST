@@ -1,0 +1,1038 @@
+/* Base Styles & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+:root {
+  --primary-color: #075e54;
+  --primary-dark: #013a33;
+  --primary-light: #39a195;
+  --accent-color: #d23672;
+  --accent-hover: #ae2b5e;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --highlight-color: #8edc68;
+  --secondary-highlight: #f3bfdf;
+  --bg-light: #f9f9f9;
+  --card-bg: #0d332d;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+
+/* Header Section */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("img/group-afro-americans-working-together.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: var(--text-light);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  padding: 1.25rem 6%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 13px;
+  /* font-weight: 500; */
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  display: block;
+  margin: auto;
+  transition: width 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Base dropdown styles - add these to your main CSS if not already present */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-top: -5px;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.dropdown-content a {
+  color: white !important; /* Override parent color */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(210, 54, 114, 0.3);
+}
+
+/* Desktop dropdown hover state */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Desktop styles */
+@media (min-width: 701px) {
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Mobile Navigation */
+nav .fa {
+  display: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+/* Text Box / Hero Section */
+.text-box {
+  width: 90%;
+  max-width: 1200px;
+  color: var(--text-light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.text-box h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.text-box p {
+  margin: 1rem 0 2.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mission Section */
+.mission-container {
+  padding: 4rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.mission-label {
+  color: var(--secondary-highlight);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin-bottom: 1rem;
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+
+.mission-statement {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.4;
+  color: var(--text-light);
+  font-weight: 550;
+}
+
+/* Vision Section */
+.vision-section {
+  background-color: var(--bg-light);
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+
+.vision-header {
+  color: #2c5823;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.vision-tagline {
+  color: #4ca92b;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.vision-description {
+  max-width: 900px;
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Principles Section */
+.principles-section {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.principles-header {
+  color: #2c5823;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.875rem;
+  justify-content: center;
+}
+
+.principle-card {
+  text-align: center;
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  padding: 1.875rem 1.25rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.principle-icon1,
+.principle-icon2,
+.principle-icon4 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.25rem;
+  object-fit: contain;
+}
+
+.principle-icon3 {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2.5rem;
+  object-fit: contain;
+}
+
+.principle-title {
+  color: var(--highlight-color);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.principle-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Call to Action */
+.mailing {
+  background-color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-light);
+  border: 1px solid var(--text-light);
+  padding: 0.75rem 2.125rem;
+  font-size: 0.875rem;
+  background: var(--accent-color);
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.hero-btn:hover {
+  border: 1px solid var(--text-light);
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(var(--primary-color), var(--primary-dark));
+  color: var(--text-light);
+  width: 100%;
+  padding: 3rem 1.5rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand {
+  grid-column: span 2;
+  min-width: 250px;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.footer-logo img {
+  width: 137px;
+  height: auto;
+  max-height: 137px;
+}
+
+.footer-description {
+  max-width: 300px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer-links a {
+  display: block;
+  color: var(--text-light);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-highlight);
+}
+
+.footer-hours p,
+.footer-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
+  border: none;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  display: block;
+  margin: auto;
+  transition: width 0.5s;
+}
+
+.social-links a:hover::after {
+  width: 100%;
+}
+
+/* .social-links a:hover {
+  color: var(--secondary-highlight);
+} */
+
+.copyright {
+  font-size: 0.8rem;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.popup-container {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  max-height: 97vh;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.popup-image {
+  flex: 1;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.popup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup-form {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(40deg, #075e54 0%, #39a195 47%, #013a33 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Make scrollable on all devices */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling */
+  max-height: 97vh; /* Control height */
+  position: relative; /* Added for proper stacking context */
+  z-index: 10; /* Higher z-index to ensure form stays on top */
+}
+
+.popup-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.popup-logo img {
+  height: 142px;
+}
+
+.popup-heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.popup-subheading {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  /* Fixed: Ensure inputs are clickable and don't trigger backdrop */
+  position: relative;
+  z-index: 15;
+}
+
+.privacy-note {
+  font-size: 12px;
+  margin: 10px 0 15px;
+  font-style: italic;
+  color: white;
+}
+
+.submit-btn {
+  background-color: #d93b7f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 30px;
+  /* Fixed: Ensure button is clickable */
+  position: relative;
+  z-index: 15;
+}
+
+.submit-btn:hover {
+  background-color: #c02e6d;
+}
+
+.close-btn {
+  position: absolute; /* Changed from fixed to absolute */
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20; /* Higher than other elements but still within container */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+  .popup-overlay {
+    padding: 0;
+    align-items: center;
+  }
+
+  .popup-container {
+    flex-direction: column;
+    max-height: 90vh;
+    width: 100%;
+    border-radius: 15px;
+    margin: 10px;
+    overflow: hidden;
+    /* Fix for iOS visibility issues */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .popup-form {
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px;
+    /* Make form appear above overlay */
+    z-index: 1001;
+  }
+
+  /* Fixed: Keep close button in viewport and above form */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1100;
+  }
+
+  .popup-logo {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .popup-image {
+    display: none;
+  }
+
+  .popup-heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .popup-subheading {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    /* Fixed: Ensure form groups appear above overlay */
+    position: relative;
+    z-index: 15;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-control {
+    padding: 8px;
+    font-size: 14px;
+    /* Additional mobile specific fixes */
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .privacy-note {
+    font-size: 11px;
+    margin: 8px 0 12px;
+  }
+}
+
+/* Small tablets (landscape phones, less than 768px) */
+@media (min-width: 577px) and (max-width: 767px) {
+  .popup-container {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 90vh; /* Consistent with mobile */
+  }
+
+  .popup-form {
+    max-height: 70vh; /* Control height for better scrolling */
+  }
+
+  .popup-logo {
+    padding-left: 35%;
+  }
+
+  .popup-image {
+    height: 120px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .popup-container {
+    max-width: 90%;
+  }
+
+  .popup-form {
+    max-height: 70vh; /* Ensure scrollable area */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+  /* Newsletter popup adjustments for very small screens */
+  .popup-heading {
+    font-size: 16px;
+  }
+
+  .popup-subheading {
+    font-size: 12px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-control {
+    padding: 7px;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Make popup scrollable in landscape */
+  .popup-container {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .popup-form {
+    padding: 15px;
+  }
+
+  .popup-logo img {
+    height: 80px;
+  }
+}
+.popup-container {
+  position: relative;
+  z-index: 1001;
+}
+
+.popup-form {
+  position: relative;
+  z-index: 1002;
+}
+
+.form-control {
+  position: relative;
+  z-index: 1003;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-control:focus {
+  z-index: 1004;
+}
+
+/* Media Queries */
+/* Mobile Devices (up to 576px) */
+@media (max-width: 700px) {
+  .nav-links {
+    position: fixed;
+    background: white;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 999;
+    transition: right 0.5s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+
+  .nav-links ul {
+    padding: 2rem 2rem;
+    /* flex-direction: column; */
+  }
+
+  .nav-links ul li {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .nav-links ul li a {
+    color: black;
+    font-size: 14px;
+  }
+
+  nav .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links .fa-times {
+    display: block;
+    color: black;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .header {
+    min-height: 70vh;
+  }
+  /* Mobile dropdown styling */
+  .dropdown-content {
+    position: static;
+    visibility: hidden;
+    opacity: 0;
+    display: none; /* Added to ensure it's hidden initially */
+    transform: none;
+    margin-top: 0;
+    padding: 5px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding: 14px 16px;
+    color: black !important;
+  }
+
+  /* Mobile dropdown hover state */
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    display: block; /* Show on hover */
+  }
+
+  /* Add a down arrow indicator for mobile dropdowns */
+  .dropdown .dropbtn::after {
+    content: " ";
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  /* Style for active/current dropdown item */
+  .dropdown-content a.active {
+    border-bottom: 2px solid #d23672;
+    padding-bottom: 6px; /* Adjust padding to accommodate border */
+  }
+
+  .mission-statement {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small Tablets (576px - 767px) */
+@media (min-width: 577px) and (max-width: 767px) {
+  .principles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+/* Medium Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Landscape orientation for small devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mission-container {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  .logo {
+    height: 80px;
+    width: auto;
+  }
+  .nav-links ul li a {
+    font-size: 20px;
+  }
+  .vision-header {
+    font-size: 50px;
+  }
+  .vision-tagline {
+    font-size: 35px;
+    font-style: italic;
+  }
+  .vision-description {
+    font-size: 25px;
+  }
+  .principles-header {
+    font-size: 50px;
+  }
+  .hero-btn {
+    font-size: 25px;
+    width: 300px;
+  }
+  .principle-icon1,
+  .principle-icon2,
+  .principle-icon4 {
+    height: 200px;
+    width: 200px;
+  }
+  .principle-icon3 {
+    width: 200px;
+    height: 180px;
+  }
+  .principle-title {
+    font-size: 22px;
+  }
+  .principle-description {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+  .footer-logo img {
+    width: 230px;
+    height: 300px;
+  }
+  .footer-heading {
+    font-size: 25px;
+  }
+  .footer-links a {
+    font-size: 20px;
+  }
+  .footer-hours p,
+  .footer-info p {
+    font-size: 20px;
+  }
+  .footer-description {
+    max-width: 500px;
+    font-size: 20px;
+  }
+  .social-links a {
+    font-size: 20px;
+  }
+  .copyright {
+    font-size: 20px;
+  }
+}

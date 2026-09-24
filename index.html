@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="./dist/output.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="img/WMLC-06-07-copy.png" sizes="32x32">
+  <link rel="icon" href="img/WMLC-06-07-copy.png" sizes="16x16">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>W+MEN</title>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img class="logo" src="img/WMLC-06-07-copy.png" /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li class="dropdown">
+            <a href="index.html#about" class="dropbtn">ABOUT</a>
+            <div class="dropdown-content">
+              <a href="story.html">OUR STORY</a>
+              <a href="team.html">OUR TEAM</a>
+            </div>
+          </li>
+          </li>
+          <li><a href="services.html">SERVICES</a></li>
+
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>
+        Empowering Leaders, <br />
+        Changing Futures.
+      </h1>
+      <p>
+        Empowering leaders and organizations through expert development,
+        strategic consulting, and impactful program implementation.
+      </p>
+
+    </div>
+  </section>
+
+  <div class="popup-overlay" id="newsletter-popup">
+    <div class="popup-container">
+
+      <button class="close-btn" id="close-popup-btn">&times;</button>
+
+
+      <div class="popup-image">
+        <img src="img/popup image.webp" alt="People collaborating around a laptop" />
+      </div>
+
+      <div class="popup-form">
+        <div class="popup-logo">
+          <img src="img/WMLC-06-07.png" alt="Women Leading Change" />
+        </div>
+
+        <!-- Heading -->
+        <h2 class="popup-heading">Stay Informed. Lead the Change.</h2>
+
+        <!-- Subheading -->
+        <p class="popup-subheading">
+          Get leadership insights, expert tips, and exclusive updates
+          straight to your inbox.
+        </p>
+
+        <!-- Form -->
+        <form id="newsletter-form">
+          <!-- Name Fields -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First name</label>
+              <input type="text" class="form-control" id="first-name" placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last name</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Andrews" />
+            </div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email Address" />
+          </div>
+
+          <!-- Privacy Note -->
+          <p class="privacy-note">
+            "We respect your privacy. No spam, just valuable insights."
+          </p>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Join now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h1>About Us</h1>
+    <p>
+      W+Men Leading Change is a leadership development and consulting firm
+      dedicated to fostering inclusive leadership, strengthening health
+      systems, and driving sustainable transformation. We equip individuals
+      and organizations with the tools to thrive in complex environments
+      through expert-led training, strategic consulting, and impactful program
+      implementation.
+      <br />
+      <br />
+      We envision a world where diverse, equitable and empowered leadership
+      thrives across all industries. W+Men Leading Change aspires to be a
+      global leader in advancing leadership excellence, organizational
+      transformation and impactful program implementation, ensuring
+      sustainable and effective solutions for all clients.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2>Services</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image">
+            <img src="img/services1 (1).webp" alt="Leadership Development" />
+          </div>
+          <div class="service-content">
+            <h3>Leadership Development Programs</h3>
+            <p>
+              Equipping professionals at all levels with leadership competencies through evidence-based learning
+            </p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image">
+            <img src="img/services3.webp" alt="Strategic Consulting" />
+          </div>
+          <div class="service-content">
+            <h3>Strategic Consulting</h3>
+            <p>
+              Helping organizations reach their leadership and development goals through expert guidance in strategy,
+              assessment, and capacity building.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image">
+            <img src="img/services2.webp" alt="Program Implementation" />
+          </div>
+          <div class="service-content">
+            <h3>Program Implementation</h3>
+            <p>
+              W+Men Leading Change delivers tailored leadership and development programs for businesses, non-profits,
+              and institutions, ensuring effective strategy execution and program management.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="see-more-btn">
+        <a href="services.html" class="services-link">
+          <button class="see-more">
+            <span>See More</span>
+            <span class="services-arrow">→</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Partners Section -->
+
+  <div class="w-full">
+
+
+  </div>
+  <!-- Partners Section -->
+  <!-- Partners Section -->
+  <section class="partners w-full flex items-center justify-center py-20 ">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <h2 class="classp text-3xl md:text-4xl font-bold text-gray-900">Our Partners</h2>
+
+      <div class="flex w-full justify-center">
+        <p class="text-gray-500 text-center flex justify-center max-w-2xl mx-auto mb-14 leading-relaxed">
+          We're proud to work alongside organizations who share our commitment to
+          inclusive leadership, stronger health systems, and lasting change.
+          Together, we're building programs that create real, measurable impact.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <div class="flex items-center justify-center w-48 h-40 bg-white rounded-xl  p-6">
+          <img src="img/partners/aghes.jpg" alt="Adaptive Global Health Solutions"
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300 ease-in-out" />
+        </div>
+
+        <div class="flex items-center justify-center w-48 h-40 bg-white rounded-xl  p-6">
+          <img src="img/partners/asido.jpg" alt="Asido Foundation"
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300 ease-in-out" />
+        </div>
+
+        <div class="flex items-center justify-center w-48 h-40 bg-white rounded-xl  p-6">
+          <img src="img/partners/byc.jpg" alt="BYC"
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300 ease-in-out" />
+        </div>
+
+        <div class="flex items-center justify-center w-48 h-40 bg-white rounded-xl  p-6">
+          <img src="img/partners/macforte.jpg" alt="Marcforté"
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300 ease-in-out" />
+        </div>
+
+        <div class="flex items-center justify-center w-48 h-40 bg-white rounded-xl  p-6">
+          <img src="img/partners/wlg.jpg" alt="Women in Leadership & Governance"
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300 ease-in-out" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="main-testimonial-container">
+      <div class="testimonial-slider">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <div class="testimonial-container">
+            <div class="testimonial-image">
+              <img src="img/Egga Akpomushi (1) copy.webp" alt="Egga Testimonial" loading="lazy" />
+            </div>
+            <div class="testimonial-content">
+              <p>
+                "Applying emotional intelligence has transformed how I
+                understand others and communicate, helping me uncover root
+                causes and spark real behavioral change."
+              </p>
+              <span class="testimonial-author">Dr. Akpomushi Egga, Senior Registrar, Plastic &
+                Reconstructive Surgery, JUTH
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-container">
+            <div class="testimonial-image">
+              <img src="img/Nera Eneh.webp" alt="Nera Testimonial" loading="lazy" />
+            </div>
+            <div class="testimonial-content">
+              <p>
+                "W+Men Leading Change strengthened my leadership skills,
+                boosted my confidence, and gave me the tools to navigate bias
+                and lead with impact."
+              </p>
+              <span class="testimonial-author">Dr. Nera Kadiri-Eneh, Senior Program Lead, KNCV Nigeria
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-container">
+            <div class="testimonial-image">
+              <img src="img/viviancompressed.webp" alt="Vivian Testimonial" loading="lazy" />
+            </div>
+            <div class="testimonial-content">
+              <p>
+                "W+Men Leading Change inspired me to lead with purpose and
+                confidence. It reshaped how I see myself as a leader and gave
+                me clarity and self-awareness to grow intentionally."
+              </p>
+              <span class="testimonial-author">Dr. Ololade Vivian Akanni, Resident Doctor, Community
+                Medicine, UPTH
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrows at the sides of the carousel( it moves a bit too much) -->
+      <div class="arrow-nav">
+        <div class="arrow prev">&lt;</div>
+        <div class="arrow next">&gt;</div>
+      </div>
+
+      <!-- Dots centered at the bottom -->
+      <div class="navigation-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+    <div class="mailing">
+      <a href="" class="hero-btn">Join Our Mailing List</a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-section footer-brand">
+        <div class="footer-logo"><img src="img/WMLC-06-07.png" alt="" /></div>
+        <div class="footer-description">
+          Empowering leaders and organizations through sustainable leadership
+          development, strategic consulting, and impactful programs.
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-heading">Quick links</div>
+        <div class="footer-links">
+          <a href="index.html#about">About us</a>
+          <a href="services.html">Services</a>
+          <a href="index.html#testimonials">Testimonials</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-heading">Opening hours</div>
+        <div class="footer-hours">
+          <p>Monday - Friday</p>
+          <p>09:00AM - 05:00PM</p>
+          <p>Saturday</p>
+          <p>10:00AM - 02:00PM</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer-heading">Contact Us</div>
+        <div class="footer-info">
+          <p>Phone No:</p>
+          <p>+2349042494900</p>
+          <p>Email:</p>
+          <p>wmenleadingchange@gmail.com</p>
+          <p>contact@wmenleadingchange.com</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="https://www.instagram.com/wmenlc/profilecard/?igsh=MThwb2ZvaGFrOXl6OQ==" target="_blank"
+          rel="noopener noreferrer ">INSTAGRAM</a>
+        <a href="#">FACEBOOK</a>
+        <a href="#">TWITTER</a>
+        <a href="https://www.linkedin.com/company/wmen-leading-change-wmenlc/" target="_blank"
+          rel="noopener noreferrer ">LINKEDIN</a>
+      </div>
+      <div class="copyright">© Copyright WMEN 2026 - All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="newsletter.js"></script>
+
+</body>
+
+</html>

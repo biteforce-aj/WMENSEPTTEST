@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="story.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>W+Men</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img class="logo" src="img/WMLC-06-07-copy.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+              <a href="index.html#about" class="dropbtn">ABOUT</a>
+              <div class="dropdown-content">
+                <a href="story.html">OUR STORY</a>
+                <a href="team.html">OUR TEAM</a>
+              </div>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+        <!-- Mission Section -->
+    <section class="mission-container">
+      <div class="mission-label">OUR MISSION</div>
+      <div class="mission-statement">
+          Empowering inclusive leadership that drives sustainable change and creates meaningful impact worldwide.
+      </div>
+  </section>
+
+        <!-- <a href="" class="hero-btn">Join Our Mailing List</a> -->
+      </div>
+      <!-- Popup Overlay -->
+      <div class="popup-overlay" id="newsletter-popup">
+        <div class="popup-container">
+          <!-- Close button inside the container -->
+          <button class="close-btn" id="close-popup-btn">&times;</button>
+
+          <!-- Left: Image Section -->
+          <div class="popup-image">
+            <img
+              src="img/popup image.webp"
+              alt="People collaborating around a laptop"
+            />
+          </div>
+
+          <!-- Right: Form Section -->
+          <div class="popup-form">
+            <!-- Logo -->
+            <div class="popup-logo">
+              <img src="img/WMLC-06-07.png" alt="Women Leading Change" />
+            </div>
+
+            <!-- Heading -->
+            <h2 class="popup-heading">Stay Informed. Lead the Change.</h2>
+
+            <!-- Subheading -->
+            <p class="popup-subheading">
+              Get leadership insights, expert tips, and exclusive updates
+              straight to your inbox.
+            </p>
+
+            <!-- Form -->
+            <form id="newsletter-form">
+              <!-- Name Fields -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first-name"
+                    placeholder="John"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last-name"
+                    placeholder="Andrews"
+                  />
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email Address"
+                />
+              </div>
+
+              <!-- Privacy Note -->
+              <p class="privacy-note">
+                "We respect your privacy. No spam, just valuable insights."
+              </p>
+
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Join now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Vision Section -->
+    <section class="vision-section">
+      <div class="container">
+          <h2 class="vision-header">Our Vision</h2>
+          <p class="vision-tagline">"Empowering leaders to drive meaningful change."</p>
+          <p class="vision-description">
+              We envision a world where diverse, equitable and empowered leadership thrives across all industries. W+Men Leading Change aspires to be a global leader in advancing leadership excellence, organizational transformation and impactful program implementation, ensuring sustainable and effective solutions for all clients.
+          </p>
+      </div>
+  </section>
+
+  <!-- Principles Section -->
+  <section class="principles-section">
+      <div class="container">
+          <h2 class="principles-header">Our Guiding Principles</h2>
+          <div class="principles-grid">
+              <div class="principle-card">
+                  <img class="principle-icon1" src="img/Group 10.svg" alt="Collaboration Icon">
+                  <h3 class="principle-title">Collaboration and Partnership</h3>
+                  <p class="principle-description">
+                      We unite diverse minds to create powerful solutions through genuine partnerships built on mutual respect and shared goals.
+                  </p>
+              </div>
+              <div class="principle-card">
+                  <img class="principle-icon2" src="img/Group 11.svg" alt="Equity Icon">
+                  <h3 class="principle-title">Equity and Access</h3>
+                  <p class="principle-description">
+                      We remove barriers to ensure leadership development is accessible to all, regardless of background or identity.
+                  </p>
+              </div>
+              <div class="principle-card">
+                  <img class="principle-icon3" src="img/Group 12.svg" alt="Integrity Icon">
+                  <h3 class="principle-title">Integrity and Accountability</h3>
+                  <p class="principle-description">
+                      We uphold transparency and ethical standards while taking responsibility for our actions and measuring our impact.
+                  </p>
+              </div>
+              <div class="principle-card">
+                  <img class="principle-icon4" src="img/Group 13.svg" alt="Innovation Icon">
+                  <h3 class="principle-title">Innovation with Purpose</h3>
+                  <p class="principle-description">
+                      We drive intentional creativity focused on practical solutions that create meaningful, sustainable change.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <div class="mailing">
+    <a href="" class="hero-btn">Join Our Mailing List</a>
+  </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-section footer-brand">
+          <div class="footer-logo"><img src="img/WMLC-06-07.png" alt="" /></div>
+          <div class="footer-description">
+            Empowering leaders and organizations through sustainable leadership
+            development, strategic consulting, and impactful programs.
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Quick links</div>
+          <div class="footer-links">
+            <a href="index.html#about">About us</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#testimonials">Testimonials</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Opening hours</div>
+          <div class="footer-hours">
+            <p>Monday - Friday</p>
+            <p>09:00AM - 05:00PM</p>
+            <p>Saturday</p>
+            <p>10:00AM - 02:00PM</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-info">
+            <p>Phone No:</p>
+            <p>+2349042494900</p>
+            <p>Email:</p>
+            <p>wmenleadingchange@gmail.com</p>
+            <p>contact@wmenleadingchange.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">TWITTER</a>
+          <a href="#">LINKEDIN</a>
+        </div>
+        <div class="copyright">© Copyright WMEN 2026 - All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <script src="story.js"></script>
+  </body>
+</html>

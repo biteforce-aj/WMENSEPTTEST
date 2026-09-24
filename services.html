@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="Women Leading Change - Empowering leaders and organizations through strategic leadership development" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>W+Men - Our Services</title>
+  </head>
+  <body>
+    <!-- IMPROVED HEADER WITH BETTER MOBILE HANDLING -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img
+              src="img/WMLC-06-01-copy.png"
+              alt="Women Leading Change Logo"
+              width="50" 
+              height="50"
+            />
+          </a>
+        </div>
+        <div class="nav-links" id="navLinks" aria-expanded="false">
+          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+              <a href="index.html#about" class="dropbtn">ABOUT</a>
+              <div class="dropdown-content">
+                <a href="story.html">OUR STORY</a>
+                <a href="team.html">OUR TEAM</a>
+              </div>
+            </li>
+            <li><a href="services.html" aria-current="page">SERVICES</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open menu"></i>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p>The journey to exceptional leadership begins with one decision.</p>
+      </div>
+    </section>
+
+    <!-- IMPROVED SERVICES SECTION WITH BETTER MOBILE LAYOUT -->
+    <section class="services">
+      <div class="container">
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card">
+            <div class="service-img">
+              <img
+                src="img/services1 (1).webp"
+                alt="Leadership Development Programs"
+                loading="lazy"
+                width="400" 
+                height="200"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Leadership Development Programs</h3>
+              <p>
+                We design and deliver comprehensive leadership development
+                programs tailored to professionals at all levels. Our programs
+                focus on enhancing leadership competencies, fostering
+                sustainable growth, and driving performance within
+                organizations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card">
+            <div class="service-img">
+              <img 
+                src="img/services3.webp" 
+                alt="Strategic Consulting" 
+                loading="lazy"
+                width="400" 
+                height="200"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Strategic Consulting</h3>
+              <p>
+                Our consulting services support organizations in achieving their
+                leadership and organizational development goals. We provide
+                expert guidance in leadership and program strategy,
+                organizational assessment, and capacity building.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card">
+            <div class="service-img">
+              <img 
+                src="img/services2.webp" 
+                alt="Program Implementation" 
+                loading="lazy"
+                width="400" 
+                height="200"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Program Implementation</h3>
+              <p>
+                W+Men Leading Change specializes in designing, implementing, and
+                managing leadership and development programs for businesses,
+                non-profits, and institutions. We ensure seamless execution of
+                strategies, initiatives, and programs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPROVED CTA SECTION FOR BETTER MOBILE DISPLAY -->
+    <section class="cta">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <h2>Ready to transform your organization?</h2>
+          <h3>Contact us now to unlock your leadership potential.</h3>
+          <p>
+            Empowering global leadership through expert development, strategic
+            consulting, and impactful implementation.
+          </p>
+          <div class="mailing">
+            <a href="#" class="hero-btn" id="popup-trigger">Join Our Mailing List</a>
+          </div>
+        </div>
+        <div class="cta-image">
+          <img 
+            src="img/Headshot_2025_.png" 
+            alt="Professional Woman Leader" 
+            loading="lazy"
+            width="400" 
+            height="500"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPROVED POPUP OVERLAY WITH BETTER MOBILE BEHAVIOR -->
+    <div class="popup-overlay" id="newsletter-popup" aria-hidden="true">
+      <div class="popup-container" role="dialog" aria-labelledby="popup-heading">
+        <!-- Close button inside the container -->
+        <button class="close-btn" id="close-popup-btn" aria-label="Close popup">&times;</button>
+
+        <!-- Left: Image Section -->
+        <div class="popup-image">
+          <img
+            src="img/popup image.webp"
+            alt="People collaborating around a laptop"
+            loading="lazy"
+            width="400" 
+            height="600"
+          />
+        </div>
+
+        <!-- Right: Form Section -->
+        <div class="popup-form">
+          <!-- Logo -->
+          <div class="popup-logo">
+            <img 
+              src="img/WMLC-06-07.png" 
+              alt="Women Leading Change" 
+              width="140" 
+              height="140"
+            />
+          </div>
+
+          <!-- Heading -->
+          <h2 class="popup-heading" id="popup-heading">Stay Informed. Lead the Change.</h2>
+
+          <!-- Subheading -->
+          <p class="popup-subheading">
+            Get leadership insights, expert tips, and exclusive updates straight
+            to your inbox.
+          </p>
+
+          <!-- Form -->
+          <form id="newsletter-form">
+            <!-- Name Fields -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="John"
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="last-name"
+                  placeholder="Andrews"
+                  autocomplete="family-name"
+                />
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email Address"
+                autocomplete="email"
+              />
+            </div>
+
+            <!-- Privacy Note -->
+            <p class="privacy-note">
+              We respect your privacy. No spam, just valuable insights.
+            </p>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Join now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPROVED FOOTER WITH BETTER MOBILE LAYOUT -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-section footer-brand">
+            <div class="footer-logo">
+              <img 
+                src="img/WMLC-06-07.png" 
+                alt="Women Leading Change logo" 
+                width="137" 
+                height="137"
+              />
+            </div>
+            <div class="footer-description">
+              Empowering leaders and organizations through sustainable leadership
+              development, strategic consulting, and impactful programs.
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <div class="footer-heading">Quick links</div>
+            <div class="footer-links">
+              <a href="index.html#about">About us</a>
+              <a href="services.html">Services</a>
+              <a href="index.html#testimonials">Testimonials</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <div class="footer-heading">Opening hours</div>
+            <div class="footer-hours">
+              <p>Monday - Friday</p>
+              <p>09:00AM - 05:00PM</p>
+            <p>Saturday</p>
+            <p>10:00AM - 02:00PM</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-info">
+            <p>Phone No:</p>
+            <p>+2349042494900</p>
+            <p>Email:</p>
+            <p>wmenleadingchange@gmail.com</p>
+            <p>contact@wmenleadingchange.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">TWITTER</a>
+          <a href="#">LINKEDIN</a>
+        </div>
+        <div class="copyright">© Copyright WMEN 2026 - All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <script src="services.js"></script>
+  </body>
+</html>
