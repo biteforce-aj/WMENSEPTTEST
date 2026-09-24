@@ -6,25 +6,26 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
-    <link rel="stylesheet" href="story.css" />
+    <link rel="stylesheet" href="team.css" />
+    <link rel="stylesheet" href="partners-2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>W+Men</title>
+    <title>W+Men | Our Partners</title>
   </head>
   <body>
-    <section class="header">
+    <section class="header header-compact">
       <nav>
         <a href="index.html"><img class="logo" src="img/WMLC-06-07-copy.png" /></a>
         <div class="nav-links" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
           <ul>
             <li><a href="index.html">HOME</a></li>
             <li class="dropdown">
@@ -37,20 +38,11 @@
               </div>
             </li>
             <li><a href="services.html">SERVICES</a></li>
+            <!-- <li><a href="">JOIN NOW</a></li> -->
           </ul>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open menu"></i>
       </nav>
-        <!-- Mission Section -->
-    <section class="mission-container">
-      <div class="mission-label">OUR MISSION</div>
-      <div class="mission-statement">
-          Empowering inclusive leadership that drives sustainable change and creates meaningful impact worldwide.
-      </div>
-  </section>
-
-        <!-- <a href="" class="hero-btn">Join Our Mailing List</a> -->
-      </div>
       <!-- Popup Overlay -->
       <div class="popup-overlay" id="newsletter-popup">
         <div class="popup-container">
@@ -128,54 +120,117 @@
         </div>
       </div>
     </section>
-    
-    <!-- Vision Section -->
-    <section class="vision-section">
-      <div class="container">
-          <h2 class="vision-header">Our Vision</h2>
-          <p class="vision-tagline">"Empowering leaders to drive meaningful change."</p>
-          <p class="vision-description">
-              We envision a world where diverse, equitable and empowered leadership thrives across all industries. W+Men Leading Change aspires to be a global leader in advancing leadership excellence, organizational transformation and impactful program implementation, ensuring sustainable and effective solutions for all clients.
-          </p>
-      </div>
-  </section>
 
-  <!-- Principles Section -->
-  <section class="principles-section">
-      <div class="container">
-          <h2 class="principles-header">Our Guiding Principles</h2>
-          <div class="principles-grid">
-              <div class="principle-card">
-                  <img class="principle-icon1" src="img/Group 10.svg" alt="Collaboration Icon">
-                  <h3 class="principle-title">Collaboration and Partnership</h3>
-                  <p class="principle-description">
-                      We unite diverse minds to create powerful solutions through genuine partnerships built on mutual respect and shared goals.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon2" src="img/Group 11.svg" alt="Equity Icon">
-                  <h3 class="principle-title">Equity and Access</h3>
-                  <p class="principle-description">
-                      We remove barriers to ensure leadership development is accessible to all, regardless of background or identity.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon3" src="img/Group 12.svg" alt="Integrity Icon">
-                  <h3 class="principle-title">Integrity and Accountability</h3>
-                  <p class="principle-description">
-                      We uphold transparency and ethical standards while taking responsibility for our actions and measuring our impact.
-                  </p>
-              </div>
-              <div class="principle-card">
-                  <img class="principle-icon4" src="img/Group 13.svg" alt="Innovation Icon">
-                  <h3 class="principle-title">Innovation with Purpose</h3>
-                  <p class="principle-description">
-                      We drive intentional creativity focused on practical solutions that create meaningful, sustainable change.
-                  </p>
-              </div>
-          </div>
+
+    <!-- Hero -->
+    <section class="p2-hero">
+      <div class="p2-hero-text">
+        <h1>Stronger Together: How Partnerships Power Every Step of Our Mission</h1>
+        <p>
+          Our partners are changemakers: organizations, institutions, and
+          leaders who stand with us to build inclusive leadership and stronger
+          health systems.
+        </p>
       </div>
-  </section>
+      <div class="p2-hero-image">
+        <img src="img/group-afro-americans-working-together.jpg" alt="Colleagues working together around a table" />
+      </div>
+    </section>
+
+    <!-- Logo Wall -->
+    <section class="trusted">
+      <h2>In Trusted Company</h2>
+      <p class="trusted-intro">
+        We are proud to collaborate with a growing network of partners who
+        amplify our reach and deepen our impact.
+      </p>
+      <!-- Placeholder: replace each logo-slot with <img src="img/partners/..." alt="Partner name" /> -->
+      <div class="logo-row logo-row-lg">
+          <div class="logo-slot logo-slot-lg"><span>Partner Logo</span></div>
+          <div class="logo-slot logo-slot-lg"><span>Partner Logo</span></div>
+          <div class="logo-slot logo-slot-lg"><span>Partner Logo</span></div>
+      </div>
+      <div class="logo-row">
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+          <div class="logo-slot"><span>Partner Logo</span></div>
+      </div>
+    </section>
+
+    <!-- Partnerships in Action -->
+    <section class="in-action">
+      <h2>Partnerships in Action</h2>
+      <div class="action-carousel">
+        <div class="action-track">
+          <!-- Placeholder: replace image, logo, name, summary and link -->
+          <article class="action-slide active">
+            <div class="action-image">
+              <img src="img/services1 (1).webp" alt="" />
+            </div>
+            <div class="action-content">
+              <div class="action-logo"><span>Partner Logo</span></div>
+              <h3>Partner Name 1:</h3>
+              <p class="action-subtitle">A one-line summary of the program or initiative delivered with this partner</p>
+              <a href="#" class="action-btn">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <!-- Placeholder: replace image, logo, name, summary and link -->
+          <article class="action-slide">
+            <div class="action-image">
+              <img src="img/services2.webp" alt="" />
+            </div>
+            <div class="action-content">
+              <div class="action-logo"><span>Partner Logo</span></div>
+              <h3>Partner Name 2:</h3>
+              <p class="action-subtitle">A one-line summary of the program or initiative delivered with this partner</p>
+              <a href="#" class="action-btn">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+          <!-- Placeholder: replace image, logo, name, summary and link -->
+          <article class="action-slide">
+            <div class="action-image">
+              <img src="img/services3.webp" alt="" />
+            </div>
+            <div class="action-content">
+              <div class="action-logo"><span>Partner Logo</span></div>
+              <h3>Partner Name 3:</h3>
+              <p class="action-subtitle">A one-line summary of the program or initiative delivered with this partner</p>
+              <a href="#" class="action-btn">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </article>
+        </div>
+        <div class="action-controls">
+          <button class="action-arrow" id="action-prev" aria-label="Previous partner">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="action-arrow" id="action-next" aria-label="Next partner">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner With Us -->
+    <section class="p2-cta-wrap">
+      <div class="p2-cta">
+        <div class="p2-cta-text">
+          <h2>Partner With Us</h2>
+          <p>
+            Let's work together to grow inclusive leadership, strengthen
+            health systems, and bring lasting change to the communities that
+            need it most.
+          </p>
+          <a href="mailto:contact@wmenleadingchange.com?subject=Partnership%20Enquiry" class="p2-cta-btn">
+            <i class="fa-solid fa-heart"></i> Partner With W+Men
+          </a>
+        </div>
+        <div class="p2-cta-image" style="background-image: url('img/businesspeople-walking-near-office-building compressed.webp')"></div>
+      </div>
+    </section>
 
   <div class="mailing">
     <a href="" class="hero-btn">Join Our Mailing List</a>
@@ -236,6 +291,7 @@
       </div>
     </footer>
 
-    <script src="story.js"></script>
+    <script src="team.js"></script>
+    <script src="partners-2.js"></script>
   </body>
 </html>
