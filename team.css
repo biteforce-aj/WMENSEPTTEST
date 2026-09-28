@@ -614,6 +614,28 @@ nav img {
 nav .fa {
   display: none;
 }
+
+/* Menu open/close buttons (wrap the fa-bars / fa-times icons so they work from the keyboard) */
+.menu-open,
+.menu-close {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu-open:focus-visible {
+  outline: 2px solid #f3bfdf;
+  outline-offset: 2px;
+}
+
+.menu-close:focus-visible {
+  outline: 2px solid #d23672;
+  outline-offset: 2px;
+}
 @media (max-width: 700px) {
   .text-box h1 {
     font-size: 20px;
@@ -637,6 +659,11 @@ nav .fa {
     text-decoration: none;
     font-size: 14px;
   }
+  .menu-open,
+  .menu-close {
+    display: block;
+  }
+
   nav .fa-times {
     display: block;
     color: black;

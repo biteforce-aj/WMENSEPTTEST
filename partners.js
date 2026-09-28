@@ -17,16 +17,34 @@ document.addEventListener("DOMContentLoaded", function () {
       selectTab(tab);
     });
 
-    // Arrow keys move between tabs
+    // Arrow keys move between tabs; Home/End jump to the first/last
     tab.addEventListener("keydown", function (e) {
       let next = null;
       if (e.key === "ArrowRight" || e.key === "ArrowDown") next = tabs[(i + 1) % tabs.length];
       if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === "Home") next = tabs[0];
+      if (e.key === "End") next = tabs[tabs.length - 1];
       if (next) {
         e.preventDefault();
         selectTab(next);
         next.focus();
       }
     });
+  });
+});
+
+// Logo band pause/play button (the band also pauses on hover and keyboard focus)
+document.addEventListener("DOMContentLoaded", function () {
+  const marquee = document.querySelector(".p3-marquee");
+  const toggle = document.querySelector(".p3-marquee-toggle");
+  if (!marquee || !toggle) return;
+
+  const icon = toggle.querySelector("i");
+  const label = toggle.querySelector("span");
+
+  toggle.addEventListener("click", function () {
+    const paused = marquee.classList.toggle("is-paused");
+    icon.className = paused ? "fa-solid fa-play" : "fa-solid fa-pause";
+    label.textContent = paused ? "Play logos" : "Pause logos";
   });
 });
