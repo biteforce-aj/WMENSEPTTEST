@@ -33,18 +33,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Logo band pause/play button (the band also pauses on hover and keyboard focus)
-document.addEventListener("DOMContentLoaded", function () {
-  const marquee = document.querySelector(".p3-marquee");
-  const toggle = document.querySelector(".p3-marquee-toggle");
-  if (!marquee || !toggle) return;
-
-  const icon = toggle.querySelector("i");
-  const label = toggle.querySelector("span");
-
-  toggle.addEventListener("click", function () {
-    const paused = marquee.classList.toggle("is-paused");
-    icon.className = paused ? "fa-solid fa-play" : "fa-solid fa-pause";
-    label.textContent = paused ? "Play logos" : "Pause logos";
-  });
-});
