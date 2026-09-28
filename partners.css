@@ -224,37 +224,10 @@
 }
 
 .p3-marquee:hover .p3-marquee-track,
-.p3-marquee:focus-within .p3-marquee-track,
-.p3-marquee.is-paused .p3-marquee-track {
+.p3-marquee:focus-within .p3-marquee-track {
   animation-play-state: paused;
 }
 
-.p3-marquee-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 28px;
-  padding: 8px 18px;
-  border: 1px solid rgba(1, 58, 51, 0.35);
-  border-radius: 30px;
-  background: transparent;
-  color: #013a33;
-  font-family: inherit;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.p3-marquee-toggle:hover {
-  background: #013a33;
-  color: #fff;
-}
-
-.p3-marquee-toggle:focus-visible {
-  outline: 2px solid #d23672;
-  outline-offset: 2px;
-}
 
 @keyframes p3-scroll {
   to {
@@ -300,10 +273,6 @@
   }
 
   .p3-marquee-track[aria-hidden="true"] {
-    display: none;
-  }
-
-  .p3-marquee-toggle {
     display: none;
   }
 }
@@ -555,18 +524,8 @@
   color: #fff;
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-  .p3-hero {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    padding-bottom: 80px;
-  }
-
-  .p3-hero h1 {
-    font-size: 2.6rem;
-  }
-
+/* Small laptops: sector cards in two columns, story tabs above a full-width panel */
+@media (max-width: 1199px) {
   .p3-sector-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -590,6 +549,25 @@
 
   .p3-tab[aria-selected="true"] {
     border-bottom-color: #d23672;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .p3-hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-bottom: 80px;
+  }
+
+  .p3-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .p3-hero-collage {
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
   }
 
   .p3-join-inner {
@@ -711,4 +689,53 @@
 /* Newsletter popup (from team.css): same deeper gradient middle for readable white text */
 .popup-form {
   background: linear-gradient(40deg, #075e54 0%, #207369 47%, #013a33 100%);
+}
+
+/* Large phones / small tablets: two columns of sector cards */
+@media (min-width: 560px) and (max-width: 768px) {
+  .p3-sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large displays: scale the page sections up so the layout keeps its
+   proportions instead of sitting in a narrow column */
+@media (min-width: 1600px) {
+  .p3-hero,
+  .p3-sectors,
+  .p3-logos,
+  .p3-stories,
+  .p3-join {
+    zoom: 1.12;
+  }
+}
+
+@media (min-width: 1920px) {
+  .p3-hero,
+  .p3-sectors,
+  .p3-logos,
+  .p3-stories,
+  .p3-join {
+    zoom: 1.25;
+  }
+}
+
+@media (min-width: 2560px) {
+  .p3-hero,
+  .p3-sectors,
+  .p3-logos,
+  .p3-stories,
+  .p3-join {
+    zoom: 1.6;
+  }
+}
+
+@media (min-width: 3200px) {
+  .p3-hero,
+  .p3-sectors,
+  .p3-logos,
+  .p3-stories,
+  .p3-join {
+    zoom: 2;
+  }
 }
