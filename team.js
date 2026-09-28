@@ -14,14 +14,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Global functions for menu control
+  const openMenuBtn = document.querySelector(".menu-open");
+  const closeMenuBtn = document.querySelector(".menu-close");
+
   window.showMenu = function () {
     navLinks.style.right = "0";
     navLinks.setAttribute("aria-expanded", "true");
+    if (openMenuBtn) openMenuBtn.setAttribute("aria-expanded", "true");
+    if (closeMenuBtn) closeMenuBtn.focus();
   };
 
   window.hideMenu = function () {
+    const wasOpen = navLinks.style.right === "0px";
     navLinks.style.right = "-250px";
     navLinks.setAttribute("aria-expanded", "false");
+    if (openMenuBtn) {
+      openMenuBtn.setAttribute("aria-expanded", "false");
+      if (wasOpen && navLinks.contains(document.activeElement)) openMenuBtn.focus();
+    }
     // Reset all dropdowns when hiding the menu
     resetDropdowns();
   };
@@ -33,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks &&
         navLinks.style.right === "0px" &&
         !navLinks.contains(event.target) &&
-        !event.target.closest(".fa-bars")
+        !event.target.closest(".fa-bars") &&
+        !event.target.closest(".menu-open")
       ) {
         hideMenu();
       }
@@ -128,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".dot");
   const arrows = document.querySelectorAll(".arrow");
+  if (!dots.length || arrows.length < 2) return;
 
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
@@ -157,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".dot");
   const prevButton = document.querySelector(".arrow.prev");
   const nextButton = document.querySelector(".arrow.next");
+  if (!slides.length || !prevButton || !nextButton) return;
 
   let currentIndex = 0;
   let interval;
