@@ -540,7 +540,8 @@
   }
 
   .p3-tab {
-    flex: 1 0 auto;
+    flex: 1 1 0;
+    min-width: 0;
     width: auto;
     border-left: none;
     border-bottom: 4px solid transparent;
@@ -549,6 +550,12 @@
 
   .p3-tab[aria-selected="true"] {
     border-bottom-color: #d23672;
+  }
+
+  /* Tabs share the row equally; long partner names wrap instead of overflowing */
+  .p3-tab-name {
+    min-width: 0;
+    line-height: 1.3;
   }
 }
 
