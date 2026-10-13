@@ -401,6 +401,15 @@
   text-transform: uppercase;
 }
 
+.p3-panel-body > .p3-panel-partner {
+  margin-bottom: 12px;
+  color: #075e54;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .p3-panel-body h3 {
   color: #013a33;
   font-size: 1.6rem;
@@ -437,6 +446,28 @@
 .p3-outcomes span {
   color: #666;
   font-size: 0.8rem;
+}
+
+.p3-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.p3-highlights li {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #f3eddf;
+  color: #013a33;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.p3-panel-body > :last-child {
+  margin-bottom: 0;
 }
 
 .p3-text-link {
@@ -645,23 +676,14 @@
     height: 72px;
   }
 
-  .p3-tab-name {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
+  /* Phones: tabs show the project name only */
+  .p3-tab-num {
+    display: none;
   }
 
   .p3-tab {
     justify-content: center;
     padding: 14px;
-  }
-
-  .p3-tab-num {
-    font-size: 1rem;
   }
 
   .p3-panel {
