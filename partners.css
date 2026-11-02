@@ -715,6 +715,116 @@
   }
 }
 
+/* Testimonials */
+.p3-testimonials {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 90px;
+}
+
+.p3-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.p3-testimonial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 44px 40px 36px;
+  background: #f3eddf;
+  border-radius: 12px;
+  border-top: 4px solid #d23672;
+}
+
+.p3-quote-mark {
+  font-size: 2rem;
+  color: #d23672;
+  margin-bottom: 18px;
+}
+
+.p3-testimonial blockquote {
+  flex: 1;
+  margin: 0 0 28px;
+}
+
+.p3-testimonial blockquote p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.p3-testimonial blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.p3-testimonial figcaption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(1, 58, 51, 0.15);
+}
+
+.p3-avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #013a33;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.p3-testimonial figcaption strong {
+  display: block;
+  color: #013a33;
+  font-size: 1.05rem;
+}
+
+.p3-testimonial-role {
+  display: block;
+  color: #ae2b5e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+@media (max-width: 992px) {
+  .p3-testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .p3-testimonials {
+    padding: 0 16px 60px;
+  }
+
+  .p3-testimonial-grid {
+    gap: 20px;
+  }
+
+  .p3-testimonial {
+    padding: 32px 22px 26px;
+  }
+
+  .p3-quote-mark {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+}
+
 /* Newsletter popup (from team.css): same deeper gradient middle for readable white text */
 .popup-form {
   background: linear-gradient(40deg, #075e54 0%, #207369 47%, #013a33 100%);
@@ -734,6 +844,7 @@
   .p3-sectors,
   .p3-logos,
   .p3-stories,
+  .p3-testimonials,
   .p3-join {
     zoom: 1.12;
   }
@@ -744,6 +855,7 @@
   .p3-sectors,
   .p3-logos,
   .p3-stories,
+  .p3-testimonials,
   .p3-join {
     zoom: 1.25;
   }
@@ -754,6 +866,7 @@
   .p3-sectors,
   .p3-logos,
   .p3-stories,
+  .p3-testimonials,
   .p3-join {
     zoom: 1.6;
   }
@@ -764,6 +877,7 @@
   .p3-sectors,
   .p3-logos,
   .p3-stories,
+  .p3-testimonials,
   .p3-join {
     zoom: 2;
   }
